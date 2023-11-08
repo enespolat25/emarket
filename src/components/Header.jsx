@@ -4,21 +4,25 @@ import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import SearchIcon from '@mui/icons-material/Search';
 //npm install @mui/icons-material
+import { Link } from "react-router-dom"
 
 function Header() {
 
   return (
     <div className="header">
 
+      <Link to="/" style={{ TextDecoration: "none" }}>
       <div className="header__logo">
-        <StorefrontIcon fontSize="large" className="header__logoImage"/>
+        <StorefrontIcon fontSize="large" className="header__logoImage" />
         <h2 className="header__logoTitle">eMarket</h2>
       </div>
+      
+      </Link>
 
       <div className="header__search">
         <input type="text" className="header__searchInput" />
-        <SearchIcon className="header__searchIcon"/>
-        
+        <SearchIcon className="header__searchIcon" />
+
       </div>
 
       <div className="header__nav">
@@ -33,10 +37,15 @@ function Header() {
           <span className="nav__itemLineTwo">Listeniz</span>
         </div>
 
-        <div className="nav__itemBasket">
-        <ShoppingBasketIcon />
-          <span className="nav__itemLineTwo nav__basketCount">22</span>
-        </div>
+        <Link to="/checkout" style={{ TextDecoration: "none" }}>
+          <div className="nav__itemBasket">
+            <ShoppingBasketIcon />
+            <span className="nav__itemLineTwo nav__basketCount">22</span>
+          </div>
+
+        </Link>
+
+
 
       </div>
     </div>
