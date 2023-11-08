@@ -1,13 +1,29 @@
 //import { SportsBasketball } from "@material-ui/icons";
 import React from "react";
 import "./Checkout.css";
+import CheckoutProduct from "./CheckoutProduct";
+import Subtotal from "./Subtotal";
 
 
 function Checkout() {
-    
+
     return (
         <div className="checkout">
-            Merhaba Dünya
+            <div className="checkout__left">
+                <img src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg" alt="" className="checkout__ad" />
+                <div>
+                    <h2 className="checkout__title">
+                        Alışveriş Sepetiniz
+                    </h2>
+                    <CheckoutProduct />
+                    <CheckoutProduct />
+                </div>
+            </div>
+
+            <div className="checkout__right">
+                <Subtotal/>
+
+            </div>
         </div>
     )
 }
