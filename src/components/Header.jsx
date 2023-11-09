@@ -19,7 +19,6 @@ function Header() {
         <StorefrontIcon fontSize="large" className="header__logoImage" />
         <h2 className="header__logoTitle">eMarket</h2>
       </div>
-      
       </Link>
 
       <div className="header__search">
@@ -30,10 +29,12 @@ function Header() {
 
       <div className="header__nav">
 
+        <Link to="/login" style={{textDecoration:"none"}}>
         <div className="nav__item">
           <span className="nav__itemLineOne">Merhaba Misafir</span>
           <span className="nav__itemLineTwo">Giriş Yap</span>
         </div>
+        </Link>
 
         <div className="nav__item">
           <span className="nav__itemLineOne">Alışveriş</span>
